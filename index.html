@@ -238,28 +238,24 @@
                     <div class="MainContent row" id="MainContent">
                         <div id="thongtinsinhvien" class="group col-md-6">
                             <span class="Title"> THÔNG TIN SINH VIÊN_20200156 </span>
-                            <button class="item_button" onclick="addInfoItem('thongtinsinhvien')"> Add info Item
+                            <button class="btn btn-success" onclick="addInfoItem('thongtinsinhvien')"> Add info Item
                             </button>
-                            <button class="item_button" onclick="addGroupItem()"> Add group Item </button>
+                            <button class="btn btn-success" onclick="addGroupItem()"> Add group Item </button>
                             <div class="group_item" id="group_item">
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div>
                         <span class="normalText">
                             <i>Ghi chú:</i>
                         </span>
-                        <span> <b> Phạm Bá Đồng_MSSV:20200156. Button bên cạnh button delete của mỗi item là button để
-                                chỉnh sửa kiểu của input (kiểu mặc
-                                định của input là text), sau khi chỉnh sửa kiểu, nếu kiểu không phải text thì sẽ có
-                                button hình dấu cộng để thêm các value vào input.
-                                <br>
-                                !!!!!!!!!!!!!Các thao tác đều bấm enter để xác nhận.</b>
+                        <span> <b>Có 2 button ở mục info item là xóa và chỉnh sửa kiểu dữ liệu , với kiểu dữ liệu khác text sẽ có thêm một button là thêm các option . Đối với mỗi lần chỉnh sửa các trường thông tin phải double click vào các trường thông tin đó để chỉnh sửa . Sau khi chỉnh sửa xong ấn enter để lưu . Khi save dữ liệu thì các button sẽ biến mất để và không thể chỉnh sửa được các trường thông tin .
+                        </b>
                         </span>
 
                     </div>
                     <div class="center">
-                        <button class="btn btn-success" id="saveButton">Save</button>
+                        <button class="btn btn-success" id="saveButton" style="margin-top:10px">Save</button>
                         <script type="text/javascript">
                             $("body").on("click", "#saveButton", function () {
 

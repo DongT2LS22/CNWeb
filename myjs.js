@@ -167,6 +167,8 @@ function create_input_value(group_id, infovalue) {
 
 }
 function changeValue(group_id, infovalue) {
+    var check = document.getElementById("saveButton")
+    if(check.innerText == "Back")return
     var name_of_info = group_id + infovalue.id;
     var type = type_of_item_input[name_of_info].type
     if (type === "select-one")
@@ -213,6 +215,8 @@ function changeValue(group_id, infovalue) {
 }
 
 function changeName(infoname, type) {
+    var check = document.getElementById("saveButton")
+    if(check.innerText == "Back")return
     var newinput = document.createElement("input");
     newinput.value = ""
     newinput.placeholder = infoname.innerText
@@ -268,7 +272,9 @@ function addInfo(group_item, cnt) {
         changeTypeOfInput(group_item.parentNode.id, valueinfo)
     })
     button.addEventListener("click", function () {
-        deleteInfo(button)
+        var result = confirm(authen + "chắc chắn muốn xóa item này?")
+        if (result)
+            deleteInfo(button)
     })
     nameinfo.addEventListener("dblclick", function () {
         changeName(nameinfo, 0)
@@ -308,13 +314,13 @@ function addGroupItem() {
         changeName(span, 1)
     })
     var button1 = document.createElement("button")
-    button1.className = "item_button"
+    button1.className = "btn btn-success margin_left_1"
     button1.innerText = "Add info item"
     button1.onclick =  function () {
         addInfoItem(name)
     }
     var button2 = document.createElement("button")
-    button2.className = "item_button"
+    button2.className = "btn btn-success margin_left_1"
     button2.innerText = "Add group item"
     button2.onclick = function () {
         addGroupItem()

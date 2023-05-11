@@ -750,8 +750,8 @@ hr {
 .group_item
 {
     border-style: solid;
-    border-width: 2px;
-    border-color: red;
+    border-width: 1px;
+    border-color: black;
     border-radius: 10px;
     display: block;
     justify-content: space-between;
@@ -765,15 +765,8 @@ hr {
     padding: 10px 10px 10px 10px;
     width: 100%;
 }
-
-.item_button
-{
-    font-size: 12px;
-    color: black;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
-    background-color: white;
+.margin_left_1{
+    margin-left: 5px;
 }
 
 .delete_button
