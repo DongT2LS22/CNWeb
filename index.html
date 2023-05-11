@@ -217,7 +217,7 @@
                                 <script type="text/javascript" src="html2canvas.js"></script>
                                 <script type="text/javascript">
                                     $("body").on("click", "#exportPdfButton", function () {
-                                        html2canvas($('#convertPdf')[0], {
+                                        html2canvas($('.MainContent')[0], {
                                             onrendered: function (canvas) {
                                                 var data = canvas.toDataURL();
                                                 var docDefinition = {
@@ -262,7 +262,14 @@
                         <button class="btn btn-success" id="saveButton">Save</button>
                         <script type="text/javascript">
                             $("body").on("click", "#saveButton", function () {
+
                                 var mainContent = document.getElementsByClassName("MainContent")[0]
+                                var input = mainContent.getElementsByTagName("input")
+                                var select = mainContent.getElementsByTagName("select")
+                                if (input.length != 0 || select.length != 0) {
+                                    alert("Có phần đang được chỉnh sửa")
+                                    return
+                                }
                                 var buttonInMainContent = mainContent.getElementsByTagName("button")
                                 if (!buttonInMainContent[0].classList.contains("hidden")) {
                                     for (let i = 0; i < buttonInMainContent.length; i++) {
